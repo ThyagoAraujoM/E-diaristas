@@ -2,7 +2,7 @@ import { Avatar, Rating, styled } from "@mui/material";
 
 export const UserInformationContainer = styled("div")`
    display: grid;
-   grid-template-columns: 40px 1fr;
+   grid-template-columns: 60px 1fr;
    grid-template-rows: repeat(3, 1f);
    grid-template-areas:
       "avatar name"
