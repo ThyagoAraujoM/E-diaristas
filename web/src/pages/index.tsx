@@ -94,7 +94,6 @@ const Home: NextPage = () => {
                      Ainda não temos nenhuma diarista disponível na sua região
                   </Typography>
                ))}
-            ;
          </Container>
       </div>
    );
