@@ -1,11 +1,23 @@
 import React from "react";
-// ReactNative não se tem html, então utilizamos o View como container e o Text para o texto que vem do react-native
 import { Text, View } from "react-native";
+import Button from "ui/components/inputs/Button/Button";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "ui/router/Router";
 
-const Index: React.FC = () => {
+type NavigationProp = StackNavigationProp<RootStackParamList, "Index">;
+
+interface IndexProps {
+   navigation: NavigationProp;
+}
+
+const Index: React.FC<IndexProps> = ({ navigation }) => {
    return (
-      <View>
-         <Text>Index</Text>
+      <View style={{ flex: 1, justifyContent: "center" }}>
+         <Button
+            mode={"contained"}
+            onPress={() => navigation.navigate("EncontrarDiaristas")}>
+            Encontre as Diaristas
+         </Button>
       </View>
    );
 };

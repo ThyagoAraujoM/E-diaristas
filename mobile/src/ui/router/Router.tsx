@@ -3,12 +3,9 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationTheme } from "ui/themes/app-theme";
-// As duas telas criadas
 import Index from "pages";
-import EncontrarDiarista from "pages";
-// tem que ser declarado como modulo ná pasta @types para remover o erro. Typescript intende isso como módulo mas n reconhece basicamente
+import EncontrarDiaristas from "pages/encontrar-diaristas";
 import Logo from "@assets/img/logos/e-diaristas-logo.png";
-// basicamente para o react criar poder criar imagens
 import { Image } from "react-native";
 
 const Stack = createStackNavigator();
@@ -22,7 +19,6 @@ const Router: React.FC = () => {
    return (
       <NavigationContainer theme={NavigationTheme}>
          <Stack.Navigator>
-            {/* Sempre a primeira tela passada abaixo vai ser a Tela renderizada ao abrir a aplicação  */}
             <Stack.Screen
                name={"Index"}
                component={Index}
@@ -42,7 +38,7 @@ const Router: React.FC = () => {
             />
             <Stack.Screen
                name={"EncontrarDiaristas"}
-               component={EncontrarDiarista}
+               component={EncontrarDiaristas}
                options={{ title: "Encontrar Diaristas" }}
             />
          </Stack.Navigator>

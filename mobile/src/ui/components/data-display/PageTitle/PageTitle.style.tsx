@@ -2,14 +2,14 @@ import styled from "@emotion/native";
 
 // import { View } from "react-native"; mesma coisa se colocar .View
 
-const PageTitleContainer = styled.View`
+export const PageTitleContainer = styled.View`
    margin: ${({ theme }) => theme.spacing(5) + " " + 0};
 `;
 
 export const PageTitleStyled = styled.Text`
    margin: 0;
    color: ${({ theme }) => theme.colors.primary};
-   font-size: 16;
+   font-size: 16px;
    text-align: center;
    font-weight: bold;
 `;

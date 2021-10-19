@@ -5,8 +5,9 @@
       "strict": true,
       "baseUrl": "src",
       "paths": {
-         "@styles/*": ["ui/styled/*"],
+         "@styles/*": ["ui/styles/*"],
          "@assets/*": ["../assets/*"]
-      }
+      },
+      "esModuleInterop": true
    }
 }
